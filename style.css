@@ -1,5 +1,6 @@
 :root{
     font-size: 62.5%; /* 1px == 1rem */
+    --bg-color: rgb(18, 18, 18);
 }
 
 * {
@@ -10,7 +11,7 @@
 
 body {
     font-size: 1.6rem;
-    background-color: rgb(18, 18, 18);
+    background-color: var(--bg-color);
 }
 
 .container {
@@ -19,12 +20,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 10rem;
 }
 
-.box {
+.hide {
+    visibility: hidden;
+}
+
+.boxes, .circles {
+    display: flex;
+    gap: 10rem;
+}
+
+.box, .circle {
     width: 5rem;
     height: 5rem;
-    margin: 3rem;
 }
 
 @keyframes rotation{
@@ -60,4 +71,27 @@ body {
 .box3 {
     background-color: greenyellow;
     animation: rotation 1.5s 0s ease-in-out infinite alternate;
+}
+
+.circle1, .circle2, .circle3 {
+    padding: 2rem;
+    background-color: var(--bg-color);
+    border-radius: 100%;
+    border: 0.5rem white solid;
+
+    /* talk about */
+    /* sobrescrevendo a cor anterior */
+    border-color: white white white transparent;
+}
+
+.circle1 {
+    animation: rotation 2s 0s linear infinite normal;
+}
+
+.circle2 {
+    animation: rotation 1s 0s ease-in-out infinite normal;
+}
+
+.circle3 {
+    animation: rotation 0.5s 0s linear infinite reverse;
 }
