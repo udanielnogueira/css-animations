@@ -13,6 +13,14 @@ body {
     background-color: rgb(18, 18, 18);
 }
 
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .box {
     width: 5rem;
     height: 5rem;
@@ -32,24 +40,24 @@ body {
     background-color: orangered;
     animation-name: rotation;
     animation-duration: 2s;
-    animation-timing-function: linear;
+    animation-delay: 0s; 
+
+    /* linear ease */
+    animation-timing-function: linear; 
+
+    /* x infinite */
     animation-iteration-count: infinite;
+
+    /* normal reverse alternate */
+    animation-direction: normal;
 }
 
 .box2 {
     background-color: blueviolet;
-    animation: rotation 2s infinite;
+    animation: rotation 2s 0s ease infinite reverse;
 }
 
 .box3 {
     background-color: greenyellow;
-    animation: rotation 1.5s reverse infinite;
-}
-
-.container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    animation: rotation 1.5s 0s ease-in-out infinite alternate;
 }
