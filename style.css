@@ -28,14 +28,31 @@ body {
     visibility: hidden;
 }
 
-.boxes, .circles {
+.display-none {
+    display: none;
+}
+
+.boxes, .circles, .buttons, .elements {
     display: flex;
     gap: 10rem;
 }
 
-.box, .circle {
-    width: 5rem;
-    height: 5rem;
+.box, .circle, .button, .element {
+    padding: 3rem;
+}
+
+.button {
+    background-color: blueviolet;
+}
+
+.element {
+    background-color: greenyellow;
+}
+
+/* Rotation animations */
+
+.box {
+    background-color: orangered;
 }
 
 @keyframes rotation{
@@ -48,7 +65,6 @@ body {
 }
 
 .box1 {
-    background-color: orangered;
     animation-name: rotation;
     animation-duration: 2s;
     animation-delay: 0s; 
@@ -64,14 +80,14 @@ body {
 }
 
 .box2 {
-    background-color: blueviolet;
     animation: rotation 2s 0s ease infinite reverse;
 }
 
 .box3 {
-    background-color: greenyellow;
     animation: rotation 1.5s 0s ease-in-out infinite alternate;
 }
+
+/* Loading animations */
 
 .circle1, .circle2, .circle3 {
     padding: 2rem;
@@ -96,4 +112,48 @@ body {
     animation: rotation 0.5s 0s linear infinite reverse;
 }
 
-/* scale animations */
+/* Scale animations */
+
+.btn-1 {
+    animation: zoom 1s 0s linear infinite alternate;
+}
+
+.btn-2 {
+    animation: zoom 0.5s 0s ease-in-out infinite alternate;
+}
+
+.btn-3 {
+    animation: zoom 2s 0s ease-in-out infinite reverse;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(100%);
+    }
+    to {
+        transform: scale(130%);
+    }
+}
+
+/* Moving animations */
+
+.elem-1 {
+    animation: moving 1s 0s linear infinite alternate;
+}
+
+.elem-2 {
+    animation: moving 0.5s 0s ease-in-out infinite alternate;
+}
+
+.elem-3 {
+    animation: moving 0.5s 0s ease-in-out infinite alternate;
+}
+
+@keyframes moving {
+    from {
+        transform: skew(0deg, 0deg);
+    }
+    to {
+        transform: skew(20deg, 10deg);
+    }
+}
