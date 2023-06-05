@@ -32,12 +32,12 @@ body {
     display: none;
 }
 
-.boxes, .circles, .buttons, .elements {
+.boxes, .circles, .buttons, .elements, .objects {
     display: flex;
     gap: 10rem;
 }
 
-.box, .circle, .button, .element {
+.box, .circle, .button, .element, .object {
     padding: 3rem;
 }
 
@@ -155,5 +155,35 @@ body {
     }
     to {
         transform: skew(20deg, 10deg);
+    }
+}
+
+/* Up and down animations */
+
+.object {
+    border-radius: 50%;
+    background-color: violet;
+}
+
+.obj-1 {
+    animation: up-down 1s linear 0s infinite alternate;
+}
+
+.obj-2 {
+    animation: up-down 1s ease-in-out 0s infinite alternate;
+}
+
+/* talk about */
+/* efeito de bola */
+.obj-3 {
+    animation: up-down 0.5s ease-out 0s infinite alternate-reverse;
+}
+
+@keyframes up-down {
+    from {
+        transform: translateY(2rem);
+    }
+    to {
+        transform: translateY(-2rem);
     }
 }
