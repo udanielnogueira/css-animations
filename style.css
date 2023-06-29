@@ -194,18 +194,18 @@ body {
 
 /* Turn animations */
 
-.turn__item--1, .turn__item--2, .turn__item--3 {
+.turn__item {
     transition: transform 1s;
 }
 
-.turn__item--1:hover {
+.turn__item:hover {
     transform: matrix(0, 1, 1, 0, 0, 0);
 }
 
-.turn__item--2:hover {
+.turn__item:nth-child(2):hover {
     transform: rotateY(180deg);
 }
 
-.turn__item--3:hover {
+.turn__item:nth-child(3):hover {
     transform: rotateX(180deg);
 }
