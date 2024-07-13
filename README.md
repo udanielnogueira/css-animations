@@ -1,2 +1,3 @@
 # css-animations
-🌌 Animações diversas em CSS3.
+
+Animações diversas em CSS3.
